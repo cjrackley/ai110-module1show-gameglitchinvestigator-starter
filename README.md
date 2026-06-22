@@ -33,20 +33,41 @@ It wrote the code, ran away, and now the game is unplayable.
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. User enters a guess of 37
+2. Game returns "Too High"
+3. User enters a guess of 23
+4. Game returns "Too Low"
+5. Game ends after the correct guess is entered
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\camer\Desktop\AI Engineering\ai110-module1show-gameglitchinvestigator-starter\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\camer\Desktop\AI Engineering\ai110-module1show-gameglitchinvestigator-starter
+plugins: anyio-4.13.0
+collecting ... collected 15 items
+
+test/test_game_logic.py::TestCheckGuessDirection::test_too_high_tells_player_to_go_lower PASSED [  6%]
+test/test_game_logic.py::TestCheckGuessDirection::test_too_low_tells_player_to_go_higher PASSED [ 13%]
+test/test_game_logic.py::TestCheckGuessDirection::test_correct_guess_wins PASSED [ 20%]
+test/test_game_logic.py::TestCheckGuessDirection::test_direction_correct_even_when_secret_is_a_string PASSED [ 26%]
+test/test_game_logic.py::TestUpdateScore::test_first_attempt_win_scores_full_100 PASSED [ 33%]
+test/test_game_logic.py::TestUpdateScore::test_win_points_decrease_with_more_attempts PASSED [ 40%]
+test/test_game_logic.py::TestUpdateScore::test_win_points_are_floored_at_10 PASSED [ 46%]
+test/test_game_logic.py::TestUpdateScore::test_too_high_always_subtracts_5_even_on_even_attempts PASSED [ 53%]
+test/test_game_logic.py::TestUpdateScore::test_too_low_subtracts_5 PASSED [ 60%]
+test/test_game_logic.py::TestUpdateScore::test_score_never_goes_below_zero PASSED [ 66%]
+test/test_game_logic.py::TestRefactoredHelpers::test_get_range_for_difficulty PASSED [ 73%]
+test/test_game_logic.py::TestRefactoredHelpers::test_parse_guess_valid_integer PASSED [ 80%]
+test/test_game_logic.py::TestRefactoredHelpers::test_parse_guess_truncates_decimal PASSED [ 86%]
+test/test_game_logic.py::TestRefactoredHelpers::test_parse_guess_rejects_empty_and_none PASSED [ 93%]
+test/test_game_logic.py::TestRefactoredHelpers::test_parse_guess_rejects_non_number PASSED [100%]
+
+============================= 15 passed in 0.09s ==============================
 ```
 
 ## 🚀 Stretch Features

@@ -8,6 +8,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
 
+Hints backwards, New Game not working after finishing previous game.
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
@@ -47,5 +48,8 @@ Document at least 3 bugs you found. Add rows as needed.
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+  Using claude to help generate testcases and summarys will be something i do for every project now.
 - What is one thing you would do differently next time you work with AI on a coding task?
+I learned to not just fully trust the AI and to make sure the changes that it is making are intended and are not system breaking errors.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+I learned the more context it has, the better the quality of its output. Whenever asking to change code, CHECK OVER IT!
